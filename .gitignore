@@ -1,0 +1,21 @@
+# CPython
+__pycache__/
+*.pyc
+
+# Packaging and Distributing
+/build/
+/dist/
+/*.egg-info/
+
+# Pycharm
+/.idea/
+
+# Test
+.pytest_cache/
+/.tox/
+
+# virtualenv
+/venv/
+
+# mypy
+.mypy_cache
