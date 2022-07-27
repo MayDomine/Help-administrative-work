@@ -1,61 +1,10 @@
-# Handright
-___A lightweight Python library for simulating Chinese handwriting___
+# 行政工作指北
+## 文字处理
+[手写字生成](https://github.dev/MayDomine/Help-administrative-work/blob/master/%E7%94%9F%E6%88%90%E6%89%8B%E5%86%99%E5%AD%97/docs)  这个仓库有一些现成的生成手写字的解决方案，感觉用来做检讨书,申请书这些非常合适
 
-[![released version](https://img.shields.io/pypi/v/Handright.svg)][pypi]
-[![python version](https://img.shields.io/pypi/pyversions/Handright.svg)][pypi]
-[![license](https://img.shields.io/github/license/Gsllchb/Handright.svg)][license]
+OCR: 我个人目前的解决方案是，windows上使用quicker + 百度的识图接口，去百度云api网站申请即可。
 
-![Test on Linux](https://github.com/Gsllchb/Handright/workflows/Test%20on%20Linux/badge.svg)
-![Test on Windows](https://github.com/Gsllchb/Handright/workflows/Test%20on%20Windows/badge.svg)
-![Test on MacOS](https://github.com/Gsllchb/Handright/workflows/Test%20on%20MacOS/badge.svg)
-
-[Tutorial][tutorial] |
-[Release Notes][release-notes] |
-[Contributing][contributing]
-
-![](docs/images/slogan.png)
-
-## Vision
-Reveal the nature of Chinese handwriting and use it to implement beautiful, simple and easy-to-use interfaces.
-
-## Algorithm
-首先，在水平位置、竖直位置和字体大小三个自由度上，对每个字的整体做随机扰动。随后，在水平位置、竖直位置和旋转角度三个自由度上，对每个字的每个笔画做随机扰动。
-
-## Installation
-```console
-pip install handright
-```
-
-## Quick Start
-```python
-# coding: utf-8
-from PIL import Image, ImageFont
-
-from handright import Template, handwrite
-
-text = "我能吞下玻璃而不伤身体。"
-template = Template(
-    background=Image.new(mode="1", size=(1024, 2048), color=1),
-    font=ImageFont.truetype("path/to/my/font.ttf", size=100),
-)
-images = handwrite(text, template)
-for im in images:
-    assert isinstance(im, Image.Image)
-    im.show()
-
-```
-更多信息请参阅[Tutorial][tutorial]。
+翻译：同上，quicker+调接口是我觉得最优的策略，如果有大量数据需要处理，建议自己写脚本调用api。
 
 
-## Join Us
-扫码或点击[链接](https://t.zsxq.com/zzZfMJq)加入Handright社区，关于Handright的使用问题请优先在社区中咨询：
-![手右](docs/images/zsxq.png)
 
-
-[tutorial]: docs/tutorial.md
-[PIL]: http://www.pythonware.com/products/pil/
-[Pillow]: http://python-pillow.org/
-[release-notes]: docs/release_notes.md
-[pypi]: https://pypi.org/project/handright/
-[license]: LICENSE.txt
-[contributing]: .github/CONTRIBUTING.md
