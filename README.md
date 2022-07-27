@@ -6,5 +6,10 @@ OCR: 我个人目前的解决方案是，windows上使用quicker + 百度的识�
 
 翻译：同上，quicker+调接口是我觉得最优的策略，如果有大量数据需要处理，建议自己写脚本调用api。
 
+## 文件处理
 
+- 批量重命名 ： 建议使用quicker或脚本
+- 收作业： 搭建ftp服务器来收作业很难受，建议选择常见的解决方案，飞书yyds
+- 字幕翻译：[terns](https://github.com/1c7/Translate-Subtitle-File)，超级好用的机翻软件。追剧没字幕可以用它！
+- 
 
